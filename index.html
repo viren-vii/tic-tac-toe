@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta charset="utf-8">
+<title>Tic Tac Toe</title>
+<meta name="description" content="HTML generator">
+<meta name="author" content="Viren-vii">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+</head>
+<body>
+<div class="animate__animated animate__bounce" id="winner">WINNER IS </div>
+<table>
+	<tr>
+		<td class="box" id="0"></td>
+		<td class="box" id="1"></td>
+		<td class="box" id="2"></td>
+	</tr>
+	<tr>
+		<td class="box" id="3"></td>
+		<td class="box" id="4"></td>
+		<td class="box" id="5"></td>
+	</tr>
+	<tr>
+		<td class="box" id="6"></td>
+		<td class="box" id="7"></td>
+		<td class="box" id="8"></td>
+	</tr>
+</table>
+<div id="currentTurn"><span id="xText">X</span><span id="oText">O</span></div>
+<div id="restartBtn">  
+    <input type="submit" value="RESTART" onclick='startGame()'/>
+</div>  
+<script src="js/scripts.js"></script>
+</body>
+</html>
