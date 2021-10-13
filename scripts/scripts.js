@@ -52,18 +52,15 @@ function handleTurn(boxOb,p,player,dom,rec,audio){
 	dom.style.opacity = '1';
 	player.push(parseInt(boxOb.id));
 	
-	//console.log(Object.keys(currentBoard).length);
 	if(Object.keys(currentBoard).length == 9)winner('tie');
 }
 
 function checkWinner(player,p){
-	//console.log("CHECKING "+p);
 	player.sort();
 	
 	for(i =0; i<winnerComibations.length; i++){
 		found = 0;
 		for(j =0; j<winnerComibations[i].length; j++){
-			//console.log(winnerComibations[i]+"---"+player);
 			if(player.includes(winnerComibations[i][j]))
 				found++;
 			else break;
@@ -103,8 +100,6 @@ function winner(p){
 		oText.style.opacity = '0.5';
 	}
 	document.getElementById('winner').style.visibility = 'visible';
-	//if(p == 'O')document.body.style.backgroundImage = "url('../css/circle.png')";
-	//else if (p == 'X')document.body.style.backgroundImage = "url('../css/cross.png')";
 	box[winnerBlocks[0]].classList.add('blink_me');
 	box[winnerBlocks[1]].classList.add('blink_me');
 	box[winnerBlocks[2]].classList.add('blink_me');
